@@ -45,14 +45,14 @@
         }
 
     </style>
-</head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
             <!-- sidebar-->
             <div class="col-md-3 col-lg-2 sidebar d-flex flex-column vh-100">
                 <div class="d-flex align-items-center mt-5 pt-5">
-                    <img src="./assets/profile.png" class="mt-3 img-fluid w-25 me-3" alt="User">
+                    <img src="assets/profile.png" class="mt-3 img-fluid w-25 me-3" alt="User">
                     <div class="col-md-2 d-flex flex-column text-white">
                         <p class="mt-2 mb-0">User</p>
                         <small>user@email.com</small>
