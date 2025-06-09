@@ -1,12 +1,12 @@
-@extends('template')
+@extends('layouts.template')
 
 @section('content')
     <h3>Data Pegawai</h3>
 
     <a href="/pegawai"> Kembali</a>
 
-    <br />
-    <br />
+    <br/>
+    <br/>
     {{-- action mengarah ke pegawai/store untuk dilakukan routing --}}
     <form action="/pegawai/store" method="post">
         {{ csrf_field() }}
@@ -39,7 +39,7 @@
                 <label class="control-label">Alamat</label>
             </div>
             <div class="col-6">
-                <textarea name="alamat" required="required" class="form-control"></textarea> <br />
+                <textarea name="alamat" required="required" class="form-control"></textarea> <br/>
             </div>
         </div>
 

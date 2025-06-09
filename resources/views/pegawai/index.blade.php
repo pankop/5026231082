@@ -1,17 +1,17 @@
-@extends('template')
+@extends('layouts.template')
 
 @section('content')
     <h3>Data Pegawai</h3>
 
     <a href="/pegawai/tambah" class="btn btn-info"> + Tambah Pegawai Baru</a>
 
-{{--    form inline ini biar dia dipaksa sebaris--}}
+    {{--    form inline ini biar dia dipaksa sebaris--}}
     <form action="/pegawai/cari" method="GET" class="form-inline">
         <label class="form-label pr-2">Cari Data Pegawai :</label>
         <input type="text" name="cari" placeholder="Cari Pegawai .." class="form-control m-1">
         <input type="submit" value="CARI" class="btn btn-primary">
     </form>
-    <br />
+    <br/>
 
     <table class="table table-striped">
         <tr>

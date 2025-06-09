@@ -33,6 +33,9 @@
             <a class="nav-link" href="/pegawai">Pegawai</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="/roti">Roti</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="#">Tugas CRUD</a>
         </li>
         <li class="nav-item">
@@ -47,6 +50,7 @@
         <li class="nav-item">
             <a class="nav-link" href="#">Latihan 3</a>
         </li>
+
     </ul>
 </nav>
 <br>

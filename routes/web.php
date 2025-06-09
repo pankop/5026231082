@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\RotiController;
 use Illuminate\Support\Facades\Route;
 //
 
@@ -74,3 +75,12 @@ Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+//route roti
+Route::get('/roti', [RotiController::class, 'index']);
+Route::get('/roti/tambah', [RotiController::class, 'tambah']);
+Route::post('/roti/store', [RotiController::class, 'store']);
+Route::get('/roti/edit/{id}', [RotiController::class, 'edit']);
+Route::post('/roti/update', [RotiController::class, 'update']);
+Route::get('/roti/hapus/{id}', [RotiController::class, 'hapus']);
+Route::get('/roti/cari', [RotiController::class, 'cari']);
