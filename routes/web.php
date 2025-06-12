@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\PageCounterController;
 use App\Http\Controllers\RotiController;
 use Illuminate\Support\Facades\Route;
 //
@@ -84,3 +86,16 @@ Route::get('/roti/edit/{id}', [RotiController::class, 'edit']);
 Route::post('/roti/update', [RotiController::class, 'update']);
 Route::get('/roti/hapus/{id}', [RotiController::class, 'hapus']);
 Route::get('/roti/cari', [RotiController::class, 'cari']);
+
+//route karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+// Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+// Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
+
+
+//page Counter
+Route::get('/counter', [PageCounterController::class, 'index']);

@@ -42,13 +42,13 @@
             <a class="nav-link" href="#">EAS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Latihan 1</a>
+            <a class="nav-link" href="/counter">Latihan 1 : NRP Perempuan</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Latihan 2</a>
+            <a class="nav-link" href="#">Latihan 2 : NRP Ganjil Laki</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Latihan 3</a>
+            <a class="nav-link" href="/karyawan">Latihan 3 : NRP Genap Laki</a>
         </li>
 
     </ul>
