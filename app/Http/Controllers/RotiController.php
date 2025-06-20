@@ -12,11 +12,15 @@ class RotiController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
         // Mengambil data dari tabel 'roti' dengan paginasi 10 item per halaman
         $roti = DB::table('roti')->paginate(10);
 
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti'  // Sesuaikan dengan nama field di DB
+            ]);
         // Mengirim data roti ke view 'roti.index'
         return view('roti.index', ['roti' => $roti]);
     }
@@ -28,6 +32,10 @@ class RotiController extends Controller
      */
     public function tambah()
     {
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/tambah'  // Sesuaikan dengan nama field di DB
+            ]);
         // Memanggil view 'roti.tambah'
         return view('roti.tambah');
     }
@@ -49,6 +57,11 @@ class RotiController extends Controller
                 'berat' => $request->berat
             ]);
 
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/store'  // Sesuaikan dengan nama field di DB
+            ]);
+
         // Alihkan halaman kembali ke daftar roti
         return redirect('/roti');
     }
@@ -65,6 +78,11 @@ class RotiController extends Controller
         $roti = DB::table('roti')
             ->where('ID', $id) // Menggunakan 'ID' karena itu nama Primary Key Anda
             ->get();
+
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/edit/'  // Sesuaikan dengan nama field di DB
+            ]);
 
         // Mengirim data roti yang didapat ke view 'roti.edit'
         return view('roti.edit', ['roti' => $roti]);
@@ -86,6 +104,11 @@ class RotiController extends Controller
             ->where('merkroti', 'like', "%" . $cari . "%")
             ->paginate();
 
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/cari'  // Sesuaikan dengan nama field di DB
+            ]);
+
         // Mengirim data roti ke view 'roti.index'
         return view('roti.index', ['roti' => $roti]);
     }
@@ -106,6 +129,11 @@ class RotiController extends Controller
             'berat' => $request->berat
         ]);
 
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/update'  // Sesuaikan dengan nama field di DB
+            ]);
+
         // Alihkan halaman kembali ke daftar roti
         return redirect('/roti');
     }
@@ -123,6 +151,10 @@ class RotiController extends Controller
             ->where('ID', $id) // Menggunakan 'ID'
             ->delete();
 
+        DB::table('logactivity')
+            ->insert([
+                'namaroute' => '/roti/hapus/'  // Sesuaikan dengan nama field di DB
+            ]);
         // Alihkan halaman kembali ke daftar roti
         return redirect('/roti');
     }

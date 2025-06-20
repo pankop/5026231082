@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+
 
 class KaryawanController extends Controller
 {
@@ -12,8 +14,14 @@ class KaryawanController extends Controller
         // Mengambil data dari tabel 'karyawan' dengan paginasi 10 item per halaman
         $karyawan = DB::table('karyawan')->paginate(10);
 
+        //$namaroute = $request->Route::currentRouteName();
         // Mengirim data karyawan ke view 'karyawan.index'
         return view('karyawan.index', ['karyawan' => $karyawan]);
+
+
+//        DB::table('logactivity')->insert([
+//            'namaroute' => request()->route()->getName(),
+//        ]);
     }
     public function tambah()
     {
